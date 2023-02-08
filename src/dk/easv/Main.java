@@ -20,10 +20,10 @@ public class Main extends Application {
         // primaryStage.setFullScreen(true);
         primaryStage.setScene(new Scene(root));
         primaryStage.getScene().getStylesheets().add(getClass().getResource("/CSS/Login.css").toExternalForm());
-        primaryStage.setMaxHeight(620);
-        primaryStage.setMaxWidth(700);
-        primaryStage.setMinHeight(620);
-        primaryStage.setMinWidth(700);
+        primaryStage.setMaxHeight(334);
+        primaryStage.setMaxWidth(500);
+        primaryStage.setMinHeight(200);
+        primaryStage.setMinWidth(350);
         primaryStage.setResizable(false);
         primaryStage.show();
 

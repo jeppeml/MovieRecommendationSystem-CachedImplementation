@@ -22,7 +22,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <PasswordField fx:id="passwordField" disable="true" promptText="Password" GridPane.rowIndex="1" />
+                  <PasswordField fx:id="passwordField" promptText="Password" GridPane.rowIndex="1" />
                   <TextField fx:id="userId" promptText="Username" text="Georgi Facello" />
                </children>
             </GridPane>
@@ -35,8 +35,8 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" onAction="#logIn" text="log - in" GridPane.columnIndex="1" />
-                  <Button mnemonicParsing="false" onAction="#signUp" text="Sig - Up" />
+                  <Button mnemonicParsing="false" onAction="#signUp" text="Sign - Up" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#logIn" text="log - in" />
                </children>
             </GridPane>
          </children>
