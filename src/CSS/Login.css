@@ -1,7 +1,11 @@
 
 
 
-AnchorPane{
-    -fx-background-image: url("/BaggroundPictuers/Bagground.jpg");
+.AnchorPane{
+    -fx-background-image: url("/Pictures/Bagground.jpg");
+}
 
+.text-field{
+    -fx-opacity: 0.6;
+    -fx-border-color: WHITE;
 }
