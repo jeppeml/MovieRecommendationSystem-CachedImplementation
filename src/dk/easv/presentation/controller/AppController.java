@@ -5,7 +5,10 @@ import dk.easv.presentation.model.AppModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
+import java.io.FileInputStream;
 import java.net.URL;
 import java.util.*;
 
@@ -61,4 +64,20 @@ public class AppController implements Initializable {
         // Select the logged-in user in the listview, automagically trigger the listener above
         lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
     }
+
+
+    public void setUpGribPanes()
+    {
+
+        Random random=new Random();
+        Image picture =  new Image("Flower"+random.nextInt(13)+".jpg");
+        ImageView imageView= new ImageView(picture);
+
+    }
+
+
+
+
+
+
 }
