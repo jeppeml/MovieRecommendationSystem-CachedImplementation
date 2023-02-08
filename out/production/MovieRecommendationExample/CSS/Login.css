@@ -2,6 +2,24 @@
 
 
 AnchorPane{
-    -fx-background-image: url("/BaggroundPictuers/Bagground.jpg");
+    -fx-background-image: url("/Pictures/Bagground.jpg");
 
+}
+
+.text-field{
+    -fx-background-color: grey;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-opacity: 0.4;
+}
+
+.button{
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-opacity: 0.6;
+}
+.button:hover{
+    -fx-opacity: 0.8;
+    -fx-cursor: hand;
 }
