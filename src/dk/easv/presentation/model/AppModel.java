@@ -7,6 +7,8 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.List;
+
 public class AppModel {
 
     LogicManager logic = new LogicManager();
@@ -61,6 +63,25 @@ public class AppModel {
     public User getObsLoggedInUser() {
         return obsLoggedInUser.get();
     }
+
+
+    public List getListTopMovieSeen(User user)
+    {
+        return logic.getTopAverageRatedMovies(user);
+    }
+
+    public List getListTopMovieNotSeen(User user)
+    {
+        return logic.getTopAverageRatedMoviesUserDidNotSee(user);
+    }
+
+    public List getListTopMoviesSimilarUsers(User user)
+    {
+        return logic.getTopMoviesFromSimilarPeople(user);
+    }
+
+
+
 
     public SimpleObjectProperty<User> obsLoggedInUserProperty() {
         return obsLoggedInUser;
