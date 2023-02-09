@@ -26,6 +26,8 @@ import java.net.URL;
 import java.util.*;
 import java.util.List;
 
+
+
 public class AppController implements Initializable {
     @FXML
     private TilePane tilePane1,tilePane2,tilePane3;
@@ -45,6 +47,8 @@ public class AppController implements Initializable {
     private AppModel model;
     private long timerStartMillis = 0;
     private String timerMsg = "";
+
+    private final int LINE_BREAK_LETTER=12;
 
     private void startTimer(String message){
         timerStartMillis = System.currentTimeMillis();
@@ -112,24 +116,52 @@ public class AppController implements Initializable {
     }
 
 
-    public String changeLineInAString(String line)
-    {
-        int length=line.length();
-        String buildString="";
+    public String changeLineInAString(String line) {
+        int length = line.length();
+        String buildString = "";
 
-        int number=length/14;
+        int number = length / LINE_BREAK_LETTER;
+        System.out.println(length);
+        System.out.println(line);
+int i;
+
+        for ( i = 0; i < number; i++) {
 
 
-        for (int i = 0; i < number; i++)
+                if (line.charAt(LINE_BREAK_LETTER * (i + 1) - 1) == ' ') {
+                    if (i==0)
+                        buildString = buildString + line.substring(0,LINE_BREAK_LETTER * (i + 1)-1)+"\n";
+                    else
+                        buildString = buildString + line.substring(LINE_BREAK_LETTER * (i)-1,LINE_BREAK_LETTER * (i + 1)-1)+"\n";
+                }
+                else
+                {
+                    if (i==0)
+                        buildString = buildString + line.substring(0,LINE_BREAK_LETTER * (i + 1)-1)+"-"+"\n";
+                    else
+                        buildString = buildString + line.substring(LINE_BREAK_LETTER * (i)-1,LINE_BREAK_LETTER * (i + 1)-1)+"-"+"\n";
+                }
 
-            buildString=line.substring(12*i,12*(i+1))+"\n";
 
-        buildString=buildString+line.substring(12*number,line.length());
+            }
+
+        if (i==0)
+            buildString = buildString + line.substring(0,length-1);
+        else
+        buildString = buildString + line.substring(LINE_BREAK_LETTER * (i)-1,length-1);
 
 
         return buildString;
-
     }
+
+
+
+
+
+
+
+
+
 
 
     public void handelSignOut(ActionEvent actionEvent) {
@@ -151,27 +183,6 @@ public class AppController implements Initializable {
 
     }
 
-    /*
-     lvUsers.setItems(model.getObsUsers());
-        lvTopForUser.setItems(model.getObsTopMovieSeen());
-        lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
-        lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
-        lvTopFromSimilar.setItems(model.getObsTopMoviesSimilarUsers());
-
-        startTimer("Load users");
-        model.loadUsers();
-        stopTimer();
-
-        lvUsers.getSelectionModel().selectedItemProperty().addListener(
-                (observableValue, oldUser, selectedUser) -> {
-                    startTimer("Loading all data for user: " + selectedUser);
-                    model.loadData(selectedUser);
-                });
-
-        // Select the logged-in user in the listview, automagically trigger the listener above
-        lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
-        showUserName();
-     */
 
 
 }

@@ -10,7 +10,7 @@
       <Button fx:id="btnSignOut" layoutX="1408.0" layoutY="45.0" mnemonicParsing="false" onAction="#handelSignOut" text="Sign out" />
       <TextField fx:id="lblLoggedInUser" editable="false" layoutX="1319.0" layoutY="19.0" />
       <TilePane fx:id="tilePane1" layoutX="106.0" layoutY="78.0" />
-      <TilePane fx:id="tilePane2" layoutX="106.0" layoutY="201.0" />
-      <TilePane fx:id="tilePane3" layoutX="116.0" layoutY="397.0" />
+      <TilePane fx:id="tilePane2" layoutX="142.0" layoutY="335.0" />
+      <TilePane fx:id="tilePane3" layoutX="105.0" layoutY="622.0" />
    </children>
 </AnchorPane>
