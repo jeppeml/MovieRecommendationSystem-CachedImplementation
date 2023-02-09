@@ -12,30 +12,35 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.TilePane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.awt.*;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.*;
+import java.util.List;
 
 public class AppController implements Initializable {
     @FXML
-    public TextField lblLoggedInUser;
+    private TilePane tilePane1,tilePane2,tilePane3;
+
+        @FXML
+    private TextField lblLoggedInUser;
+
     @FXML
     private Button btnSignOut;
 
-    @FXML
-    private ListView<User> lvUsers;
-    @FXML
-    private ListView<Movie> lvTopForUser;
-    @FXML
-    private ListView<Movie> lvTopAvgNotSeen;
-    @FXML
-    private ListView<UserSimilarity> lvTopSimilarUsers;
-    @FXML
-    private ListView<TopMovie> lvTopFromSimilar;
+    private List<Movie> getTopAverageRatedMovies;
 
+    private List<Movie> getTopAverageRatedMoviesUserDidNotSee;
+
+    private List<TopMovie> getTopMoviesFromSimilarPeople;
 
     private AppModel model;
     private long timerStartMillis = 0;
@@ -55,36 +60,51 @@ public class AppController implements Initializable {
 
     }
 
-    public void setModel(AppModel model) {
+    public void setModel(AppModel model) throws FileNotFoundException {
         this.model = model;
-        lvUsers.setItems(model.getObsUsers());
-        lvTopForUser.setItems(model.getObsTopMovieSeen());
-        lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
-        lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
-        lvTopFromSimilar.setItems(model.getObsTopMoviesSimilarUsers());
-
-        startTimer("Load users");
-        model.loadUsers();
-        stopTimer();
-
-        lvUsers.getSelectionModel().selectedItemProperty().addListener(
-                (observableValue, oldUser, selectedUser) -> {
-                    startTimer("Loading all data for user: " + selectedUser);
-                    model.loadData(selectedUser);
-                });
-
-        // Select the logged-in user in the listview, automagically trigger the listener above
-        lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
         showUserName();
+        getTopAverageRatedMovies=model.getTopAverageRatedMovies();
+        getTopAverageRatedMoviesUserDidNotSee=model.getTopAverageRatedMoviesUserDidNotSee();
+        getTopMoviesFromSimilarPeople=model.getTopMoviesFromSimilarPeople();
+        setUpGribPanes("getTopAverageRatedMovies",0);
+        setUpGribPanes("getTopAverageRatedMoviesUserDidNotSee",1);
+        setUpGribPanes("getTopMoviesFromSimilarPeople",2);
     }
 
 //Marl Erev
-    public void setUpGribPanes()
-    {
+    public void setUpGribPanes(String listName, int tilePane) throws FileNotFoundException {
+
 
         Random random=new Random();
-        Image picture =  new Image("Flower"+random.nextInt(13)+".jpg");
-        ImageView imageView= new ImageView(picture);
+        TilePane[] tilePanes={tilePane1,tilePane2,tilePane3};
+        javafx.scene.control.Label movieTitle;
+        for (int i = 0; i < 6; i++) {
+
+            if (listName=="getTopAverageRatedMovies")
+            {
+                movieTitle = new javafx.scene.control.Label(getTopAverageRatedMovies.get(i).getTitle());
+            }
+            else if (listName=="getTopAverageRatedMoviesUserDidNotSee")
+            {
+                 movieTitle = new javafx.scene.control.Label(getTopAverageRatedMoviesUserDidNotSee.get(i).getTitle());
+            }
+            else
+            {
+                 movieTitle = new javafx.scene.control.Label(getTopMoviesFromSimilarPeople.get(i).getTitle());
+            }
+
+            Image picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+random.nextInt(13)+".jpg")));
+            ImageView imageView= new ImageView(picture);
+            imageView.setFitWidth(75);
+            imageView.setFitHeight(100);
+            VBox vbox=new VBox();
+            vbox.getChildren().add(imageView);
+            vbox.getChildren().add(movieTitle);
+            tilePanes[tilePane].getChildren().add(vbox);
+
+        }
+
+
 
     }
     public void handelSignOut(ActionEvent actionEvent) {
@@ -103,5 +123,30 @@ public class AppController implements Initializable {
     }
     public void showUserName(){
         lblLoggedInUser.setText(model.getObsLoggedInUser().getName());
+
     }
+
+    /*
+     lvUsers.setItems(model.getObsUsers());
+        lvTopForUser.setItems(model.getObsTopMovieSeen());
+        lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
+        lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
+        lvTopFromSimilar.setItems(model.getObsTopMoviesSimilarUsers());
+
+        startTimer("Load users");
+        model.loadUsers();
+        stopTimer();
+
+        lvUsers.getSelectionModel().selectedItemProperty().addListener(
+                (observableValue, oldUser, selectedUser) -> {
+                    startTimer("Loading all data for user: " + selectedUser);
+                    model.loadData(selectedUser);
+                });
+
+        // Select the logged-in user in the listview, automagically trigger the listener above
+        lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
+        showUserName();
+     */
+
+
 }
