@@ -78,26 +78,30 @@ public class AppController implements Initializable {
         Random random=new Random();
         TilePane[] tilePanes={tilePane1,tilePane2,tilePane3};
         javafx.scene.control.Label movieTitle;
-        for (int i = 0; i < 6; i++) {
+        String line;
+
+
+        for (int i = 0; i < 5; i++) {
 
             if (listName=="getTopAverageRatedMovies")
-            {
-                movieTitle = new javafx.scene.control.Label(getTopAverageRatedMovies.get(i).getTitle());
-            }
-            else if (listName=="getTopAverageRatedMoviesUserDidNotSee")
-            {
-                 movieTitle = new javafx.scene.control.Label(getTopAverageRatedMoviesUserDidNotSee.get(i).getTitle());
-            }
-            else
-            {
-                 movieTitle = new javafx.scene.control.Label(getTopMoviesFromSimilarPeople.get(i).getTitle());
-            }
+            line=changeLineInAString(getTopAverageRatedMovies.get(i).getTitle());
 
+            else if (listName=="getTopAverageRatedMoviesUserDidNotSee")
+            line=changeLineInAString(getTopAverageRatedMoviesUserDidNotSee.get(i).getTitle());
+
+            else
+            line=changeLineInAString(getTopMoviesFromSimilarPeople.get(i).getTitle());
+
+
+
+            movieTitle = new javafx.scene.control.Label(line);
             Image picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+random.nextInt(13)+".jpg")));
             ImageView imageView= new ImageView(picture);
             imageView.setFitWidth(75);
             imageView.setFitHeight(100);
             VBox vbox=new VBox();
+            vbox.setMinSize(200,200);
+            vbox.setMaxSize(200,200);
             vbox.getChildren().add(imageView);
             vbox.getChildren().add(movieTitle);
             tilePanes[tilePane].getChildren().add(vbox);
@@ -105,8 +109,29 @@ public class AppController implements Initializable {
         }
 
 
+    }
+
+
+    public String changeLineInAString(String line)
+    {
+        int length=line.length();
+        String buildString="";
+
+        int number=length/14;
+
+
+        for (int i = 0; i < number; i++)
+
+            buildString=line.substring(12*i,12*(i+1))+"\n";
+
+        buildString=buildString+line.substring(12*number,line.length());
+
+
+        return buildString;
 
     }
+
+
     public void handelSignOut(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation Dialog");
