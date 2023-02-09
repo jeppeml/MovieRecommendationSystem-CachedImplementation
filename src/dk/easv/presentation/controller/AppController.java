@@ -50,14 +50,7 @@ public class AppController implements Initializable {
 
     private final int LINE_BREAK_LETTER=12;
 
-    private void startTimer(String message){
-        timerStartMillis = System.currentTimeMillis();
-        timerMsg = message;
-    }
 
-    private void stopTimer(){
-        System.out.println(timerMsg + " took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -121,8 +114,7 @@ public class AppController implements Initializable {
         String buildString = "";
 
         int number = length / LINE_BREAK_LETTER;
-        System.out.println(length);
-        System.out.println(line);
+
 int i;
 
         for ( i = 0; i < number; i++) {
@@ -153,10 +145,6 @@ int i;
 
         return buildString;
     }
-
-
-
-
 
 
 
