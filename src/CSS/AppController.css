@@ -1,7 +1,27 @@
-
-
-
-AnchorPane{
+AnchorPane {
     -fx-background-image: url("/Pictures/DarkGreyBackground.jpg");
+}
 
+#lblLoggedInUser{
+    -fx-border-color: TRANSPARENT;
+    -fx-background-color: TRANSPARENT;
+    -fx-text-fill: WHITE;
+    -fx-font-family: "Verdana";
+}
+
+#btnSignOut{
+    -fx-background-color: TRANSPARENT;
+    -fx-border-color: TRANSPARENT;
+    -fx-text-fill: WHITE;
+    -fx-font-family: "Verdana";
+}
+
+#btnSignOut:hover{
+    -fx-text-fill: LIGHTGRAY;
+    -fx-cursor: HAND;
+}
+
+.label{
+    -fx-text-fill: WHITE;
+    -fx-font-family: "Verdana";
 }
