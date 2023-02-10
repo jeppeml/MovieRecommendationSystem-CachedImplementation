@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -42,9 +43,12 @@ public class LogInController implements Initializable {
             stage.setScene(new Scene(root));
             stage.setTitle("Movie Recommendation System 0.01 Beta");
             stage.getScene().getStylesheets().add(getClass().getResource("/CSS/AppController.css").toExternalForm());
-            stage.setMaxHeight(1440);
-            stage.setMaxWidth(900);
-            stage.setResizable(true);
+            stage.setMaxHeight(768);
+            stage.setMaxWidth(1024);
+            stage.setMinHeight(768);
+            stage.setMinWidth(1024);
+            //stage.setResizable(true);
+            //stage.setFullScreen(true);
             stage.show();
             AppController controller = loader.getController();
 
