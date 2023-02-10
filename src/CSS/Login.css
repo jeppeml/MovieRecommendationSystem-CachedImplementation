@@ -35,3 +35,9 @@ AnchorPane{
     -fx-background-color: #d50404;
     -fx-font-size: 15px;
 }
+
+.label{
+    -fx-font-size: 22px;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-text-fill: WHITE;
+}
