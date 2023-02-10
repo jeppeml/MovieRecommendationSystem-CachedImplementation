@@ -7,19 +7,31 @@ AnchorPane{
 }
 
 .text-field{
-    -fx-background-color: grey;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-background-color: rgba(255,255,255,.4);
+    -fx-prompt-text-fill: rgba(255,255,255,.8);
     -fx-background-radius: 30px;
-    -fx-border-radius: 30px;
-    -fx-opacity: 0.4;
+
 }
 
 .button{
-    -fx-text-fill: #ffffff;
     -fx-background-radius: 30px;
-    -fx-border-radius: 30px;
-    -fx-opacity: 0.6;
+    -fx-background-color: rgba(255,255,255,.4);
+    -fx-text-fill: WHITE;
+    -fx-font-family: "Arial Rounded MT Bold";
 }
 .button:hover{
-    -fx-opacity: 0.8;
+    -fx-background-color: rgba(255,255,255,.8);
     -fx-cursor: hand;
+}
+
+.password-field{
+    -fx-background-color: rgba(255,255,255,.4);
+    -fx-prompt-text-fill: rgba(255,255,255,.8);
+}
+
+#btnExit{
+    -fx-background-radius: 0px;
+    -fx-background-color: #d50404;
+    -fx-font-size: 15px;
 }
