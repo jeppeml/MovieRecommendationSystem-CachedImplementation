@@ -1,6 +1,5 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
 AnchorPane{
     -fx-background-image: url("/Pictures/Bagground.jpg");
@@ -29,4 +28,16 @@ AnchorPane{
 .password-field{
     -fx-background-color: rgba(255,255,255,.4);
     -fx-prompt-text-fill: rgba(255,255,255,.8);
+}
+
+#btnExit{
+    -fx-background-radius: 0px;
+    -fx-background-color: #d50404;
+    -fx-font-size: 15px;
+}
+
+.label{
+    -fx-font-size: 22px;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-text-fill: WHITE;
 }

@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -15,8 +16,8 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("presentation/view/LogIn.fxml"));
         Parent root = loader.load();
-        
-        primaryStage.setTitle("Movie Recommendation System 1.1");
+
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         // primaryStage.setFullScreen(true);
         primaryStage.setScene(new Scene(root));
         primaryStage.getScene().getStylesheets().add(getClass().getResource("/CSS/Login.css").toExternalForm());
