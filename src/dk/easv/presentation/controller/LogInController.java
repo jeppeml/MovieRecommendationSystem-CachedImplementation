@@ -28,6 +28,7 @@ public class LogInController implements Initializable {
     }
 
     public void logIn(ActionEvent actionEvent) {
+
         model.loadUsers();
         model.loginUserFromUsername(userId.getText());
         if(model.getObsLoggedInUser()!=null){
@@ -37,6 +38,10 @@ public class LogInController implements Initializable {
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setTitle("Movie Recommendation System 0.01 Beta");
+            stage.getScene().getStylesheets().add(getClass().getResource("/CSS/AppController.css").toExternalForm());
+            stage.setMaxHeight(1440);
+            stage.setMaxWidth(900);
+            stage.setResizable(true);
             stage.show();
             AppController controller = loader.getController();
 
