@@ -50,6 +50,8 @@ public class LogInController implements Initializable {
 
             controller.setModel(model);
 
+            stage = (Stage) btnExit.getScene().getWindow();
+            stage.close();
 
         } catch (IOException e) {
             e.printStackTrace();
