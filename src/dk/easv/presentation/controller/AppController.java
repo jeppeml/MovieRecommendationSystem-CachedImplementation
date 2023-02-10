@@ -72,27 +72,42 @@ public class AppController implements Initializable {
     public void setUpGribPanes(String listName, int tilePane) throws FileNotFoundException {
 
 
-        Random random=new Random();
+        Random r0=new Random(124);
+        Random r1=new Random(457);
+        Random r2=new Random(788);
         TilePane[] tilePanes={tilePane1,tilePane2,tilePane3};
         javafx.scene.control.Label movieTitle;
         String line;
 
+        Image picture;
 
         for (int i = 0; i < 5; i++) {
 
             if (listName=="getTopAverageRatedMovies")
-            line=changeLineInAString(getTopAverageRatedMovies.get(i).getTitle());
+            {
+                line=changeLineInAString(getTopAverageRatedMovies.get(i).getTitle());
+                movieTitle = new javafx.scene.control.Label(line);
+                 picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+r0.nextInt(13)+".jpg")));
+
+            }
 
             else if (listName=="getTopAverageRatedMoviesUserDidNotSee")
-            line=changeLineInAString(getTopAverageRatedMoviesUserDidNotSee.get(i).getTitle());
+            {
+                line=changeLineInAString(getTopAverageRatedMoviesUserDidNotSee.get(i).getTitle());
+                movieTitle = new javafx.scene.control.Label(line);
+                 picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+r1.nextInt(13)+".jpg")));
+            }
 
             else
-            line=changeLineInAString(getTopMoviesFromSimilarPeople.get(i).getTitle());
+            {
+                line=changeLineInAString(getTopMoviesFromSimilarPeople.get(i).getTitle());
+                movieTitle = new javafx.scene.control.Label(line);
+                picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+r2.nextInt(13)+".jpg")));
+            }
 
 
 
-            movieTitle = new javafx.scene.control.Label(line);
-            Image picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+random.nextInt(13)+".jpg")));
+
             ImageView imageView= new ImageView(picture);
             imageView.setFitWidth(75);
             imageView.setFitHeight(100);
