@@ -24,4 +24,5 @@ AnchorPane {
 .label{
     -fx-text-fill: WHITE;
     -fx-font-family: "Verdana";
+    -fx-font-size: 16;
 }
