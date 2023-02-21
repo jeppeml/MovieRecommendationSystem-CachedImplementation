@@ -48,7 +48,7 @@ public class AppController implements Initializable {
     private long timerStartMillis = 0;
     private String timerMsg = "";
 
-    private final int LINE_BREAK_LETTER=12;
+    private final int LINE_BREAK_LETTER=18;
 
 
 
@@ -109,11 +109,11 @@ public class AppController implements Initializable {
 
 
             ImageView imageView= new ImageView(picture);
-            imageView.setFitWidth(75);
-            imageView.setFitHeight(100);
+            imageView.setFitWidth(150);
+            imageView.setFitHeight(200);
             VBox vbox=new VBox();
-            vbox.setMinSize(200,200);
-            vbox.setMaxSize(200,200);
+            vbox.setMinSize(250,300);
+            vbox.setMaxSize(250,300);
             vbox.getChildren().add(imageView);
             vbox.getChildren().add(movieTitle);
             tilePanes[tilePane].getChildren().add(vbox);

@@ -10,11 +10,11 @@
    <children>
       <Button fx:id="btnSignOut" layoutX="1408.0" layoutY="45.0" mnemonicParsing="false" onAction="#handelSignOut" text="Sign out" />
       <TextField fx:id="lblLoggedInUser" alignment="CENTER_RIGHT" editable="false" layoutX="1325.0" layoutY="19.0" />
-      <TilePane fx:id="tilePane1" layoutX="105.0" layoutY="75.0" />
-      <TilePane fx:id="tilePane2" layoutX="105.0" layoutY="335.0" />
-      <TilePane fx:id="tilePane3" layoutX="105.0" layoutY="625.0" />
-      <Label layoutX="105" layoutY="50.0" text="Top Movies from similar users" />
-      <Label layoutX="105" layoutY="310.0" text="Top Average movies user did not see" />
-      <Label layoutX="105" layoutY="600.0" text="Top Average movies foe users" />
+      <TilePane fx:id="tilePane1" layoutX="250.0" layoutY="75.0" />
+      <TilePane fx:id="tilePane2" layoutX="250.0" layoutY="385.0" />
+      <TilePane fx:id="tilePane3" layoutX="250.0" layoutY="725.0" />
+      <Label layoutX="250" layoutY="50.0" text="Top Movies from similar users" />
+      <Label layoutX="250" layoutY="360.0" text="Top Average movies user did not see" />
+      <Label layoutX="250" layoutY="700.0" text="Top Average movies foe users" />
    </children>
 </AnchorPane>
