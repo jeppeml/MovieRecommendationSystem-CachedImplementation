@@ -1,6 +1,5 @@
 package dk.easv.presentation.controller;
 
-import dk.easv.entities.User;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,12 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -43,8 +38,6 @@ public class LogInController implements Initializable {
             stage.setScene(new Scene(root));
             stage.setTitle("Movie Recommendation System 0.01 Beta");
             stage.getScene().getStylesheets().add(getClass().getResource("/CSS/AppController.css").toExternalForm());
-            stage.setMinHeight(768);
-            stage.setMinWidth(1024);
             //stage.setResizable(true);
             //stage.setFullScreen(true);
             stage.show();

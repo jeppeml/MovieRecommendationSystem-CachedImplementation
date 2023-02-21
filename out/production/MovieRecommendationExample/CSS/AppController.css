@@ -26,3 +26,16 @@ AnchorPane {
     -fx-font-family: "Verdana";
     -fx-font-size: 16;
 }
+
+#lblSimilarUsers{
+    -fx-font-size: 20;
+    -fx-font-weight: BOLD;
+}
+#lblAverageNotSeen{
+    -fx-font-weight: BOLD;
+    -fx-font-size: 20;
+}
+#lblAverageSeen{
+    -fx-font-size: 20;
+    -fx-font-weight: BOLD;
+}
