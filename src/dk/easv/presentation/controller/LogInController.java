@@ -43,11 +43,7 @@ public class LogInController implements Initializable {
             stage.setScene(new Scene(root));
             stage.setTitle("Movie Recommendation System 0.01 Beta");
             stage.getScene().getStylesheets().add(getClass().getResource("/CSS/AppController.css").toExternalForm());
-            stage.setMaxHeight(768);
-            stage.setMaxWidth(1024);
-            stage.setMinHeight(768);
-            stage.setMinWidth(1024);
-            //stage.setResizable(true);
+            //stage.setResizable(false);
             //stage.setFullScreen(true);
             stage.show();
             AppController controller = loader.getController();

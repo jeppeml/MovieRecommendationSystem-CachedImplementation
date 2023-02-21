@@ -1,7 +1,9 @@
+
+
 AnchorPane {
     -fx-background-image: url("/Pictures/DarkGreyBackground.jpg");
-}
 
+}
 #lblLoggedInUser{
     -fx-border-color: TRANSPARENT;
     -fx-background-color: TRANSPARENT;
@@ -25,3 +27,22 @@ AnchorPane {
     -fx-text-fill: WHITE;
     -fx-font-family: "Verdana";
 }
+#GreaterThan1{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+#GreaterThan2{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+#GreaterThan3{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+#LessThan1{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+#LessThan2{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+#LessThan3{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+

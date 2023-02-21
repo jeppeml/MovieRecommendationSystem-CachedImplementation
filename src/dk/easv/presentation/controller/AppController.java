@@ -60,6 +60,7 @@ public class AppController implements Initializable {
     public void setModel(AppModel model) throws FileNotFoundException {
         this.model = model;
         showUserName();
+        greaterAndLessThan();
         getTopAverageRatedMovies=model.getTopAverageRatedMovies();
         getTopAverageRatedMoviesUserDidNotSee=model.getTopAverageRatedMoviesUserDidNotSee();
         getTopMoviesFromSimilarPeople=model.getTopMoviesFromSimilarPeople();
@@ -67,8 +68,27 @@ public class AppController implements Initializable {
         setUpGribPanes("getTopAverageRatedMoviesUserDidNotSee",1);
         setUpGribPanes("getTopMoviesFromSimilarPeople",2);
     }
+    public void greaterAndLessThan() throws FileNotFoundException {
 
-//Marl Erev
+
+
+      //  ImageView myImageView;
+      //  Image myImage = new Image(getClass().getResourceAsStream("Resources/Pictures/GreaterThan.png"));
+     /*   ImageView imageView= new ImageView(picture);
+        imageView.setFitWidth(75);
+        imageView.setFitHeight(100);
+        VBox vbox=new VBox();
+        vbox.setMinSize(200,200);
+        vbox.setMaxSize(200,200);
+        vbox.getChildren().add(imageView);
+
+      */
+
+    }
+    public void displayImage(){
+
+    }
+
     public void setUpGribPanes(String listName, int tilePane) throws FileNotFoundException {
 
 
@@ -104,6 +124,20 @@ public class AppController implements Initializable {
                 movieTitle = new javafx.scene.control.Label(line);
                 picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+r2.nextInt(13)+".jpg")));
             }
+          /*  else if
+            {
+                line=changeLineInAString(getTopMoviesFromSimilarPeople.get(i).getTitle());
+                movieTitle = new javafx.scene.control.Label(line);
+                picture =  new Image(new FileInputStream(("Resources/Pictures/GreaterThan.png")));
+            }
+            else
+            {
+                line=changeLineInAString(getTopMoviesFromSimilarPeople.get(i).getTitle());
+                movieTitle = new javafx.scene.control.Label(line);
+                picture =  new Image(new FileInputStream(("Resources/Pictures/Less than.png")));
+            }
+
+           */
 
 
 
@@ -166,7 +200,6 @@ int i;
 
 
 
-
     public void handelSignOut(ActionEvent actionEvent) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation Dialog");
@@ -185,7 +218,6 @@ int i;
         lblLoggedInUser.setText(model.getObsLoggedInUser().getName());
 
     }
-
 
 
 }
