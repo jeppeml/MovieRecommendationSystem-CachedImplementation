@@ -69,9 +69,9 @@ public class AppController implements Initializable {
     public void setUpGribPanes(String listName, int tilePane) throws FileNotFoundException {
 
 
-        Random r0=new Random(124);
-        Random r1=new Random(457);
-        Random r2=new Random(788);
+        Random r0=new Random();
+        Random r1=new Random();
+        Random r2=new Random();
         TilePane[] tilePanes={tilePane1,tilePane2,tilePane3};
         javafx.scene.control.Label movieTitle;
         String line;
