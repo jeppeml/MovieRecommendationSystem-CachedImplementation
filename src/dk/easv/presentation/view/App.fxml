@@ -18,7 +18,32 @@
       <Label layoutX="105" layoutY="50.0" text="Top Movies from similar users" />
       <Label layoutX="105" layoutY="310.0" text="Top Average movies user did not see" />
       <Label layoutX="105" layoutY="600.0" text="Top Average movies foe users" />
-      <ImageView fx:id="GreaterThan1" fitHeight="171.0" fitWidth="200.0" layoutX="55.0" layoutY="102.0">
+      <ImageView fx:id="LessThan1" fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="145.0" rotate="180.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="LessThan2" fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="445.0" rotate="180.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="LessThan3" fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="701.0" rotate="180.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GreaterThan2" fitHeight="50.0" fitWidth="50.0" layoutX="1375.0" layoutY="470.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GreaterThan3" fitHeight="50.0" fitWidth="50.0" layoutX="1375.0" layoutY="701.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GreaterThan1" fitHeight="50.0" fitWidth="50.0" layoutX="1375.0" layoutY="195.0">
          <image>
             <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
          </image>
