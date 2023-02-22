@@ -2,27 +2,21 @@
 
 #GreaterThan1{
     -fx-image: url("/Pictures/GreaterThan.png");
-    -fx-background-color: red;
 }
 #GreaterThan2{
     -fx-image: url("/Pictures/GreaterThan.png");
-    -fx-background-color: red;
 }
 #GreaterThan3{
     -fx-image: url("/Pictures/GreaterThan.png");
-    -fx-background-color: red;
 }
 #LessThan1{
     -fx-image: url("/Pictures/GreaterThan.png");
-    -fx-background-color: red;
 }
 #LessThan2{
     -fx-image: url("/Pictures/GreaterThan.png");
-    -fx-background-color: red;
 }
 #LessThan3{
     -fx-image: url("/Pictures/GreaterThan.png");
-    -fx-progress-color: red;
 }
 AnchorPane {
     -fx-background-image: url("/Pictures/DarkGreyBackground.jpg");
