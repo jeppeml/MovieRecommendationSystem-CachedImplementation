@@ -10,6 +10,36 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="1494.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
+      <ImageView fx:id="LessThan1" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="145.0" rotate="180.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="LessThan2" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="445.0" rotate="180.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="LessThan3" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="701.0" rotate="180.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GreaterThan2" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="1375.0" layoutY="470.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GreaterThan3" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="1375.0" layoutY="701.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GreaterThan1" accessibleRole="BUTTON" fitHeight="50.0" fitWidth="50.0" layoutX="1375.0" layoutY="195.0">
+         <image>
+            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
+         </image>
+      </ImageView>
       <Button fx:id="btnSignOut" layoutX="1408.0" layoutY="45.0" mnemonicParsing="false" onAction="#handelSignOut" text="Sign out" />
       <TextField fx:id="lblLoggedInUser" alignment="CENTER_RIGHT" editable="false" layoutX="1325.0" layoutY="19.0" />
       <TilePane fx:id="tilePane1" layoutX="105.0" layoutY="75.0" />
@@ -18,35 +48,5 @@
       <Label layoutX="105" layoutY="50.0" text="Top Movies from similar users" />
       <Label layoutX="105" layoutY="310.0" text="Top Average movies user did not see" />
       <Label layoutX="105" layoutY="600.0" text="Top Average movies foe users" />
-      <ImageView fx:id="LessThan1" fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="145.0" rotate="180.0">
-         <image>
-            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="LessThan2" fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="445.0" rotate="180.0">
-         <image>
-            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="LessThan3" fitHeight="50.0" fitWidth="50.0" layoutX="26.0" layoutY="701.0" rotate="180.0">
-         <image>
-            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="GreaterThan2" fitHeight="50.0" fitWidth="50.0" layoutX="1375.0" layoutY="470.0">
-         <image>
-            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="GreaterThan3" fitHeight="50.0" fitWidth="50.0" layoutX="1375.0" layoutY="701.0">
-         <image>
-            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="GreaterThan1" fitHeight="50.0" fitWidth="50.0" layoutX="1375.0" layoutY="195.0">
-         <image>
-            <Image url="@../../../../../Resources/Pictures/GreaterThan.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

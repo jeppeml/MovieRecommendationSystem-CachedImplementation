@@ -1,9 +1,28 @@
 
 
+#GreaterThan1{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+#GreaterThan2{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+#GreaterThan3{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+#LessThan1{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+#LessThan2{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
+#LessThan3{
+    -fx-image: url("/Pictures/GreaterThan.png");
+}
 AnchorPane {
     -fx-background-image: url("/Pictures/DarkGreyBackground.jpg");
 
 }
+
 #lblLoggedInUser{
     -fx-border-color: TRANSPARENT;
     -fx-background-color: TRANSPARENT;
@@ -28,7 +47,6 @@ AnchorPane {
     -fx-font-family: "Verdana";
     -fx-font-size: 16;
 }
-
 #lblSimilarUsers{
     -fx-font-size: 20;
     -fx-font-weight: BOLD;
@@ -37,25 +55,7 @@ AnchorPane {
     -fx-font-weight: BOLD;
     -fx-font-size: 20;
 }
+
 #lblAverageSeen{
     -fx-font-size: 20;
     -fx-font-weight: BOLD;
-
-#GreaterThan1{
-    -fx-image: url("/Pictures/GreaterThan.png");
-}
-#GreaterThan2{
-    -fx-image: url("/Pictures/GreaterThan.png");
-}
-#GreaterThan3{
-    -fx-image: url("/Pictures/GreaterThan.png");
-}
-#LessThan1{
-    -fx-image: url("/Pictures/GreaterThan.png");
-}
-#LessThan2{
-    -fx-image: url("/Pictures/GreaterThan.png");
-}
-#LessThan3{
-    -fx-image: url("/Pictures/GreaterThan.png");
-}
