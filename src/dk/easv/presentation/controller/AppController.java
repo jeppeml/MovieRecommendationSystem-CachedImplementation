@@ -81,26 +81,24 @@ public class AppController implements Initializable {
         for (int i = 0; i < 5; i++) {
 
             if (listName=="getTopAverageRatedMovies")
-            {
-                line=changeLineInAString(getTopAverageRatedMovies.get(i).getTitle());
-                movieTitle = new javafx.scene.control.Label(line);
-                 picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+r0.nextInt(13)+".jpg")));
 
-            }
+            line=getTopAverageRatedMovies.get(i).getTitle();
 
             else if (listName=="getTopAverageRatedMoviesUserDidNotSee")
-            {
-                line=changeLineInAString(getTopAverageRatedMoviesUserDidNotSee.get(i).getTitle());
-                movieTitle = new javafx.scene.control.Label(line);
-                 picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+r1.nextInt(13)+".jpg")));
-            }
+
+                line=getTopAverageRatedMoviesUserDidNotSee.get(i).getTitle();
 
             else
-            {
-                line=changeLineInAString(getTopMoviesFromSimilarPeople.get(i).getTitle());
-                movieTitle = new javafx.scene.control.Label(line);
-                picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+r2.nextInt(13)+".jpg")));
-            }
+
+                line=getTopMoviesFromSimilarPeople.get(i).getTitle();
+
+
+
+
+            picture =  new Image(new FileInputStream(("Resources/Pictures/Flower"+r0.nextInt(13)+".jpg")));
+            movieTitle = new javafx.scene.control.Label(line);
+            movieTitle.setMaxWidth(150);
+            movieTitle.setWrapText(true);
             ImageView imageView= new ImageView(picture);
             imageView.setFitWidth(150);
             imageView.setFitHeight(200);
@@ -114,44 +112,6 @@ public class AppController implements Initializable {
         }
 
 
-    }
-
-
-    public String changeLineInAString(String line) {
-        int length = line.length();
-        String buildString = "";
-
-        int number = length / LINE_BREAK_LETTER;
-
-int i;
-
-        for ( i = 0; i < number; i++) {
-
-
-                if (line.charAt(LINE_BREAK_LETTER * (i + 1) - 1) == ' ') {
-                    if (i==0)
-                        buildString = buildString + line.substring(0,LINE_BREAK_LETTER * (i + 1)-1)+"\n";
-                    else
-                        buildString = buildString + line.substring(LINE_BREAK_LETTER * (i)-1,LINE_BREAK_LETTER * (i + 1)-1)+"\n";
-                }
-                else
-                {
-                    if (i==0)
-                        buildString = buildString + line.substring(0,LINE_BREAK_LETTER * (i + 1)-1)+"-"+"\n";
-                    else
-                        buildString = buildString + line.substring(LINE_BREAK_LETTER * (i)-1,LINE_BREAK_LETTER * (i + 1)-1)+"-"+"\n";
-                }
-
-
-            }
-
-        if (i==0)
-            buildString = buildString + line.substring(0,length-1);
-        else
-        buildString = buildString + line.substring(LINE_BREAK_LETTER * (i)-1,length-1);
-
-
-        return buildString;
     }
 
 

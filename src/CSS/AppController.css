@@ -47,7 +47,7 @@ AnchorPane {
     -fx-text-fill: WHITE;
     -fx-font-family: "Verdana";
     -fx-font-size: 16;
-<<<<<<< Updated upstream
+
 }
 #lblSimilarUsers{
     -fx-font-size: 20;
@@ -61,7 +61,7 @@ AnchorPane {
 #lblAverageSeen{
     -fx-font-size: 20;
     -fx-font-weight: BOLD;
-=======
+
 
 }
->>>>>>> Stashed changes
+
